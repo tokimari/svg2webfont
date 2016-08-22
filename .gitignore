@@ -1,0 +1,4 @@
+.DS_Store
+dest/
+node_modules/
+svg2webfonts-darwin-x64/

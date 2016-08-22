@@ -1,0 +1,17 @@
+/**
+ * Foundation Mixin
+ */
+flatButtonAction(color)
+  &:not([disabled]):hover
+    background-color darken(color, 10%)
+
+  &[disabled]
+    background-color lighten(color, 45%)
+
+buttonAction(color)
+  &:not([disabled]):hover
+    color darken(color, 45%)
+
+  &[disabled]
+    color lighten(color, 45%)
+

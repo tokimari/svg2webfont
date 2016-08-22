@@ -1,0 +1,18 @@
+/**
+ * Layout Grid
+ */
+.l-grid
+  clearfix()
+  grid-gutter = 5px
+  margin-left -(grid-gutter)
+  margin-right @margin-left
+  &__item
+    box-sizing border-box
+    display block
+    float left
+    &--1n2
+      width 50%
+      padding grid-gutter
+    &--1n3
+      width 33.3%
+      padding grid-gutter

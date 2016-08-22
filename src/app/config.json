@@ -1,0 +1,10 @@
+{
+  "name" : "samplicons",
+  "icons" :
+  [
+    {"class_name":"checkmark","unicode":"\\F000"},
+    {"class_name":"close","unicode":"\\F001"},
+    {"class_name":"question","unicode":"\\F002"}
+    
+  ]
+}

@@ -1,0 +1,37 @@
+/**
+ * Component Modal
+ */
+.c-modal
+  absolute top 0 right 0 bottom 0 left 0
+  color tc-default
+  size 400px 270px
+  margin auto
+
+  &-outer
+    absolute top 0 right 0 bottom 0 left 0
+    background-color clr-black-alpha
+    size 100%
+    z-index index-over
+
+  &__inner
+    background-color bgc-default
+    border-radius common-radius
+    box-sizing border-box
+    height inherit
+    padding 20px 30px
+
+  &__button
+    absolute top 0 right 0
+
+  &__heading
+    border-bottom solid 1px bdc-light
+    font-size fs-large
+    font-weight bold
+    margin-bottom 15px
+    padding-bottom 10px
+
+  &__body
+    color tc-default
+    text-align left
+    margin 15px 5px
+    padding-left 20px

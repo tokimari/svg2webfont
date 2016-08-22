@@ -1,0 +1,23 @@
+{
+  "fontSizes": [
+    { "value": 80, "selected": true },
+    { "value": 70, "selected": false },
+    { "value": 60, "selected": false },
+    { "value": 50, "selected": false },
+    { "value": 40, "selected": true },
+    { "value": 30, "selected": true },
+    { "value": 20, "selected": true },
+    { "value": 18, "selected": false },
+    { "value": 16, "selected": true },
+    { "value": 14, "selected": true },
+    { "value": 12, "selected": false },
+    { "value": 10, "selected": true }
+  ],
+  "formats": [
+    {"value": "eot", "selected": true},
+    {"value": "ttf", "selected": true},
+    {"value": "woff", "selected": true},
+    {"value": "woff2", "selected": true},
+    {"value": "svg", "selected": true}
+  ]
+}

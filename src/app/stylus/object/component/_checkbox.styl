@@ -1,0 +1,40 @@
+/**
+ * Component Checkbox
+ */
+.c-checkbox
+  root = selector()
+  margin-bottom 5px
+  &__item
+    display none
+    &[disabled]
+      & + {root}__mark
+        background-color bgc-disabled
+        opacity common-opacity
+      & ~ {root}__label
+        color tc-disabled
+        opacity common-opacity
+
+    &:checked + {root}__mark
+      background-color clr-accent
+      border none
+      color clr-white
+      &:before
+        @extend .icon--checkmark:before
+
+  &__mark
+    checkmark-height = 15px
+    background-color bgc-default
+    border solid 1px bdc-default
+    border-radius common-radius
+    box-sizing border-box
+    display inline-block
+    font-size fs-xsmall
+    line-height checkmark-height
+    size checkmark-height
+    text-align center
+    @extend .icon
+
+  &__label
+    color tc-default
+    font-size fs-small
+    margin-left 4px

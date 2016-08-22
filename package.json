@@ -1,0 +1,42 @@
+{
+  "name": "svg2webfonts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "build": "node_modules/.bin/electron .",
+    "package": "gulp clean && gulp build && electron-packager . svg2webfonts --platform=darwin --arch=x64 --overwrite",
+    "release": "node release.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-core": "^6.10.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-es2015-riot": "^1.1.0",
+    "del": "^2.2.1",
+    "electron-packager": "^7.0.4",
+    "electron-prebuilt": "^1.2.3",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-consolidate": "^0.2.0",
+    "gulp-iconfont": "^8.0.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-riot": "^0.5.3",
+    "gulp-stylus": "^2.5.0",
+    "gulp-watch": "^4.3.9",
+    "jade": "^1.11.0",
+    "lodash": "^4.13.1",
+    "nib": "^1.1.0",
+    "riot": "^2.5.0",
+    "stylus": "^0.54.5"
+  }
+}

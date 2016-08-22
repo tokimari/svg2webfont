@@ -1,0 +1,22 @@
+/**
+ * Foundation icon
+ */
+@font-face
+  font-family 'samplicons'
+  src url("./samplicons.woff2") format("woff2")
+  font-weight normal
+  font-style normal
+
+.icon
+  font-family 'samplicons'
+  display inline-block
+  line-height 1
+  vertical-align middle
+  font-weight normal
+  font-style normal
+
+  for key,value in iconData
+    if key[0] == icons
+      for k in key[1]
+        &--{k[0][1]}:before
+          content k[1][1]

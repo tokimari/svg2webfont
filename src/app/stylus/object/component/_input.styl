@@ -1,0 +1,29 @@
+/**
+ * Component Input
+ */
+.c-input
+  input-height = 40px
+  &__inner
+    height input-height
+
+  &__input
+    appearance none
+    border-radius common-radius
+    border solid 1px bdc-default
+    border-radius common-radius
+    box-shadow none
+    box-sizing border-box
+    display block
+    line-height (input-height - 2)
+    outline none
+    padding 0 14px
+    width 100%
+    &:not([disabled])
+      color tc-default
+      &:focus
+        border-color bdc-accent
+      &:hover
+        background-color bgc-hover
+    &[disabled]
+      color tc-disabled
+      opacity common-opacity

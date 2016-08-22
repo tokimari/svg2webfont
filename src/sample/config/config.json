@@ -1,0 +1,8 @@
+{
+  "name" : "<%= fontName %>",
+  "icons" :
+  [
+    <% _.forEach(glyphs, function(glyph, idx) { %>{"class_name":"<%= glyph.name %>","unicode":"\\<%= glyph.unicode[0].charCodeAt(0).toString(16).toUpperCase() %>"}<% if(idx < glyphs.length - 1) { %>,<% } %>
+    <% }) %>
+  ]
+}

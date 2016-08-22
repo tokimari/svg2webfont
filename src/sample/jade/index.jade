@@ -1,0 +1,42 @@
+html
+  head
+    meta(charset="utf-8")
+    link(rel="stylesheet", type="text/css", href="./index.css")
+    title #{fontName}
+  body
+    header.header
+      h1 #{fontName}
+      dl.list
+        dt.list__title Font Size:
+        for fs in fontSize
+          dd.list__item #{fs}px
+      nav.header__nav.list
+        if glyphs
+          for key in glyphs
+            if key != fontName
+              each glyph, idx in key
+                if glyph.unicode
+                  -var unicode = glyph.unicode.substr(1)
+                  if idx % indexUnit == 0
+                    a(href="#char-#{unicode}").list__item
+                      span(class="icon--#{glyph.class_name}").icon
+                      | #{unicode}
+    section.main
+      ul.sample-list
+        if glyphs
+          for key in glyphs
+            if key != fontName
+              each glyph in key
+                if glyph.unicode
+                  -var unicode = glyph.unicode.substr(1)
+                  li(id="char-#{unicode}").sample-list__item
+                    h3.sample-list__heading
+                      span(class="icon--#{glyph.class_name}").icon
+                      span.sample-list__name #{glyph.class_name}
+                      span.sample-list__code #{unicode}
+                    ul.icon-list
+                      for fs in fontSize
+                        li(class="u-fs--#{fs}").icon-list__item
+                          span(class="icon--#{glyph.class_name}").icon
+                          | #{sampleText}
+                          span(class="icon--#{glyph.class_name}").icon

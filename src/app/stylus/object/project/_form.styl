@@ -1,0 +1,21 @@
+/**
+ * Project Form
+ */
+.p-form
+  root = selector()
+  form-base-margin = 5px
+  &__section
+    & + &
+      margin-top form-base-margin * 4
+      border-top solid 1px bdc-light
+      padding-top @margin-top
+  &__item
+    display block
+    & + &
+      margin-top form-base-margin * 3
+
+  &__label
+    font-weight bold
+    font-size fs-small
+    & + {root}__inner
+      margin-top form-base-margin * 2

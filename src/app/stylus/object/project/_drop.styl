@@ -1,0 +1,29 @@
+/**
+ * Project Drop
+ */
+.p-drop
+  align-items center
+  border dashed 1px bdc-default
+  border-radius common-radius
+  box-sizing border-box
+  color tc-lightgray
+  display flex
+  justify-content center
+  text-align center
+  outline none
+  position relative
+  size 100% 120px
+  text-decoration none
+  &:hover
+    background-color bgc-hover
+  &.is-active
+    border-color bdc-accent
+    color tc-default
+
+  &__input
+    absolute top 0 right 0 bottom 0 left 0
+    size 100%
+    opacity 0
+ 
+  &__placeholder
+    font-size small
