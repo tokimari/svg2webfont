@@ -3,7 +3,6 @@
  */
 .c-checkbox
   root = selector()
-  margin-bottom 5px
   &__item
     display none
     &[disabled]
@@ -15,7 +14,7 @@
         opacity common-opacity
 
     &:checked + {root}__mark
-      background-color clr-accent
+      background-color bgc-accent
       border none
       color clr-white
       &:before
@@ -23,6 +22,7 @@
 
   &__mark
     checkmark-height = 15px
+    common-transition(background-color)
     background-color bgc-default
     border solid 1px bdc-default
     border-radius common-radius

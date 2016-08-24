@@ -1,17 +1,20 @@
 /**
  * Foundation Mixin
  */
-flatButtonAction(color)
+common-transition(prop=all)
+  transition prop 0.3s linear
+
+buttonBgAction($color)
+  common-transition(background-color)
   &:not([disabled]):hover
-    background-color darken(color, 10%)
-
+    background-color darken($color, 15%)
   &[disabled]
-    background-color lighten(color, 45%)
+    background-color lighten($color, 55%)
 
-buttonAction(color)
+buttonClrAction($color)
+  common-transition(color)
   &:not([disabled]):hover
-    color darken(color, 45%)
-
+    color darken($color, 55%)
   &[disabled]
-    color lighten(color, 45%)
+    color lighten($color, 45%)
 

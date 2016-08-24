@@ -2,11 +2,12 @@
  * Component Tooltip
  */
 .c-tooltip
+  root = selector()
   color tc-gray
   opacity 0
   &-outer
     transition opacity 0.3s linear
     &:hover
     &:focus
-      .c-tooltip
+      {root}
         opacity 1

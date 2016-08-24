@@ -6,16 +6,13 @@
   form-base-margin = 5px
   &__section
     & + &
-      margin-top form-base-margin * 4
-      border-top solid 1px bdc-light
-      padding-top @margin-top
+      margin-top form-base-margin * 5
   &__item
     display block
     & + &
       margin-top form-base-margin * 3
 
   &__label
+    color clr-gray-a
     font-weight bold
     font-size fs-small
-    & + {root}__inner
-      margin-top form-base-margin * 2

@@ -1,34 +1,23 @@
 /**
- * Component Button
- */
-.c-button
-  background-color transparent
-  border none
-  font-size fs-small
-  outline none
-  &:not([disabled])
-    cursor pointer
-
-/**
  * Component Flat Button
  */
 .c-flat-button
   background-color btc-default
-  flatButtonAction(@background-color)
-  border-radius 4px
-  color #fff
-  min-height 40px
+  buttonBgAction(@background-color)
+  border-radius common-radius
+  color clr-white
+  min-height 35px
   padding 5px 10px
   width 100%
 
   &--primary
     background-color btc-primary
-    flatButtonAction(@background-color)
+    buttonBgAction(@background-color)
 
   &.is-processing
     color transparent
     position relative
-    opacity 0.7
+    opacity common-opacity
     &:after
       absolute top 0 right 0 bottom 0 left 0
       animation rotation 0.5s linear infinite
@@ -56,12 +45,3 @@
       width 12px
       height @width
       absolute top 4px right 4px
-
-/**
- * Component Icon Button
- */
-.c-icon-button
-  color btc-default
-  buttonAction(btc-default)
-  font-size fs-large
-  padding 10px

@@ -1,7 +1,7 @@
 <s2w-modal>
   <div if="{ isDisplay }" class="c-modal-outer" onclick="{ onClickOuter }">
     <div class="c-modal" onclick="{ onClickInner }">
-      <button class="c-modal__button c-button c-icon-button icon icon--close" onclick="{ onClose }"></button>
+      <button class="c-modal__close c-button icon icon--close" onclick="{ onClose }"></button>
       <div class="c-modal__inner">
         <h2 class="c-modal__heading"><yield from="heading"></yield></h2>
         <div class="c-modal__body">

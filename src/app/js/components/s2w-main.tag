@@ -1,7 +1,8 @@
 <s2w-main>
   <div id="sidebar">
     <header id="header" class="l-header">
-      <h1 class="l-header__inner">svg2webfonts converter</h1>
+      <h1 class="l-header__heading c-heading">svg2webfonts</h1>
+      <p class="u-note">SVG icons convert to webfonts</p>
     </header>
     <s2w-droparea path={ opts.path } class="l-container"></s2w-droparea>
 
@@ -11,7 +12,7 @@
       <s2w-download-btn path={ opts.path } class="l-grid__item l-grid__item--1n3"></s2w-download-btn>
     </div>
     <s2w-form path={ opts.path } class="l-container">
-      <h2 class="l-container__heading">Option Settings</h2>
+      <h2 class="l-container__heading c-heading">Option Settings</h2>
     </s2w-form>
     <div class="l-container l-container--aside">
       <button class="c-button c-tooltip-outer p-help-button" onclick="{ onClickHelp }">
