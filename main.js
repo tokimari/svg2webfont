@@ -8,8 +8,8 @@ let win;
 
 function createWindow() {
   win = new BrowserWindow({
-    width: 1200,
-    height: 1000,
+    width: 1000,
+    height: 800,
     titleBarStyle: 'hidden-inset'
   });
   win.loadURL(`file://${__dirname}/index.html`);
@@ -18,7 +18,7 @@ function createWindow() {
   });
 
   // for develop mode
-  //win.webContents.openDevTools();
+  // win.webContents.openDevTools();
 
   win.on('closed', () => {
     win = null;

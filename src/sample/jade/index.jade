@@ -6,10 +6,6 @@ html
   body
     header.header
       h1 #{fontName}
-      dl.list
-        dt.list__title Font Size:
-        for fs in fontSize
-          dd.list__item #{fs}px
       nav.header__nav.list
         if glyphs
           for key in glyphs
@@ -21,6 +17,11 @@ html
                     a(href="#char-#{unicode}").list__item
                       span(class="icon--#{glyph.class_name}").icon
                       | #{unicode}
+      dl.header__size-list.list
+        dt.list__title Font Size:
+        for fs in fontSize
+          dd.list__item #{fs}px
+
     section.main
       ul.sample-list
         if glyphs

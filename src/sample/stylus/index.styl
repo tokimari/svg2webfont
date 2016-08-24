@@ -19,6 +19,7 @@ bdc-light = clr-whitesmoke
 fs-xlarge = 2.2rem
 fs-large = 1.6rem
 fs-medium = 1.4rem
+fs-small = 1.2rem
 
 common-radius = 4px
 common-opacity = 0.6
@@ -82,7 +83,7 @@ header-padding = 25px
   box-sizing border-box
   font-size fs-medium
   margin-bottom 0
-  padding header-padding
+  padding (header-padding - 5px) header-padding
   fixed top 0 left 0
   width 100%
   z-index 10
@@ -93,15 +94,18 @@ header-padding = 25px
     line-height @font-size
     margin-bottom 10px
     word-break break-word
-    max-width 500px
 
   &__nav
-    absolute top header-padding right header-padding
     line-height fs-xlarge
+    margin-bottom 5px
+
+  &__size-list
+    font-size fs-small
+
 
 .main
   box-sizing border-box
-  margin-top 2*header-padding + 45px
+  margin-top 110px
   padding-bottom @margin-top
   position fixed
   overflow scroll
@@ -128,8 +132,7 @@ header-padding = 25px
     padding 28px 25px 25px
     color #333
     width 100%
-    & + &
-      border-top solid 15px bdc-light
+    border-bottom solid 15px bdc-light
 
   &__heading
     border-bottom solid 1px bdc-light
