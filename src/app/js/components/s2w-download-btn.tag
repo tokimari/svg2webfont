@@ -39,6 +39,7 @@
      * sample build完了時
      */
     sampleStore.on('complete', () => {
+      sampleAction.closeModal();
       zipDirectory(sampleStore.getResources()).then(() => {
         this.building = false;
         this.hasUpdateForDownload = true;

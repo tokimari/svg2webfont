@@ -16,6 +16,12 @@
       this.isDisplay = true;
       this.update();
     })
+
+    sampleStore.on('closeModal', () => {
+      this.isDisplay = false;
+      this.update();
+    })
+
     _close = (e) => {
       e.preventDefault();
       e.stopPropagation();

@@ -49,6 +49,7 @@ class SampleStore extends Store {
     };
     this.on('change', this.onChange.bind(this));
     this.on('openModal', this.trigger('openModal'));
+    this.on('closeModal', this.trigger('closeModal'));
   }
   onChange(item) {
     this._item[item.type] = item.value;
@@ -102,6 +103,9 @@ class ActionCreator {
 class SampleAction extends ActionCreator {
   openModal() {
     this.dispatcher.trigger('openModal');
+  }
+  closeModal() {
+    this.dispatcher.trigger('closeModal');
   }
 }
 
