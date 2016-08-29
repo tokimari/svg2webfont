@@ -20,6 +20,9 @@ $ npm run build    # open app
 
 # for use
 $ npm run package  # build & packaging this app
+
+# for build styleguide for development
+$ gulp styleguide && open ./dest/styleguide/index.html
 ```
 
 

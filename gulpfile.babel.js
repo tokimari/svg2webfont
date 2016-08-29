@@ -7,6 +7,7 @@ import babel from 'gulp-babel';
 import nib from 'nib';
 import concat from 'gulp-concat';
 import del from 'del';
+import aigis from 'gulp-aigis';
 
 const _path = {
   src: {
@@ -14,7 +15,8 @@ const _path = {
     components: __dirname + "/src/app/js/components/**/*.tag",
     js: __dirname + "/src/app/js/*.js",
     icon: __dirname + "/src/app/samplicons.woff2",
-    iconConfig: __dirname + "/src/app/config.json"
+    iconConfig: __dirname + "/src/app/config.json",
+    styleguide: __dirname + "/aigis_config.yml"
   },
   dest: {
     css: __dirname + "/dest/app/css/",
@@ -50,6 +52,7 @@ gulp.task('copy', () => {
 gulp.task('build:stylus', ['copy'], () => {
   gulp.src(_path.src.stylus)
     .pipe(stylus({
+      compress: false,
       define: {
         iconData: samplicons
       },
@@ -82,3 +85,7 @@ gulp.task('build:js', ['build:components'], () => {
 
 })
 
+gulp.task('styleguide', () => {
+  gulp.src(_path.src.styleguide)
+    .pipe(aigis());
+})

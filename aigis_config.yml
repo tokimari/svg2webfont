@@ -1,0 +1,17 @@
+# The directory containing the source files to parse recursively
+# FIXME: template jadeにArrayで展開しているため、Arrayのみ許容する
+source:
+  - ./dest/app/css/index.css
+
+# The directory that aigis will build to
+dest: ./dest/styleguide
+
+# The assets needed to build the docs
+# You may put doc related assets here too: images, css, etc.
+dependencies:
+  - ./styleguide/aigis_assets
+
+# The directory containing the tempalte files to generate pages
+# It must contain 'layout.xxx' and 'index.xxx' (.ejs or .jade or .hbs)
+template_dir: ./styleguide/template_jade
+template_engine: jade
