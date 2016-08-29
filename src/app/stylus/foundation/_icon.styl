@@ -1,6 +1,30 @@
-/**
- * Foundation icon
- */
+/*!
+---
+name: Icon
+category:
+  - foundation
+  - foundation/icon
+compile: true
+//FIXME: styleguide上にベタ書きしてしまっている
+data:
+  icons: 
+    - checkmark
+    - close
+    - question
+---
+
+* Use for icon font.
+
+### Type
+
+```jade
+each icon in data.icons
+  p
+    i(class="icon--#{icon}").icon
+    | #{icon}
+```
+*/
+
 @font-face
   font-family 'samplicons'
   src url("./samplicons.woff2") format("woff2")

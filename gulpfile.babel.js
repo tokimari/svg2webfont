@@ -52,7 +52,6 @@ gulp.task('copy', () => {
 gulp.task('build:stylus', ['copy'], () => {
   gulp.src(_path.src.stylus)
     .pipe(stylus({
-      compress: false,
       define: {
         iconData: samplicons
       },

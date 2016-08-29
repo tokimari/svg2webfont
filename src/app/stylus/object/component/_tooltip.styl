@@ -1,6 +1,22 @@
-/**
- * Component Tooltip
- */
+/*!
+---
+name: Tooltip
+category:
+  - component
+  - component/tooltip
+---
+
+* Tooltip Components privide description for contents.
+
+#### State
+- hover
+- focus
+
+```jade
+button.c-tooltip-outer Tooltip
+  span.c-tooltip Tooltip description.
+```
+*/
 .c-tooltip
   root = selector()
   color tc-gray

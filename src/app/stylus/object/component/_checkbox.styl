@@ -1,11 +1,53 @@
-/**
- * Component Checkbox
- */
+/*!
+---
+name: Checkbox
+category:
+  - component
+  - component/checkbox
+compile: true
+data:
+  - value: 0
+    disabled: false
+    checked: false
+  - value: 1
+    disabled: false
+    checked: true
+  - value: 2
+    disabled: true
+    checked: false
+  - value: 3
+    disabled: true
+    checked: true
+---
+
+* Checkbox Component allows user to select value from set options.
+ 
+
+### State
+
+- default
+- disabled
+- checked
+
+```jade
+each item in data
+  div.c-checkbox
+    input(
+      type="checkbox"
+      id="c-checkbox#{item.value}"
+      name="c-checkbox#{item.value}"
+      disabled="#{item.disabled}"
+      checked="#{item.checked}"
+    ).c-checkbox__item
+    label(for="c-checkbox#{item.value}").c-checkbox__mark
+    label(for="c-checkbox#{item.value}").c-checkbox__label #{item.value}
+```
+*/
 .c-checkbox
   root = selector()
   &__item
     display none
-    &[disabled]
+    &[disabled]:not([disabled="false"])
       & + {root}__mark
         background-color bgc-disabled
         opacity common-opacity
@@ -13,12 +55,13 @@
         color tc-disabled
         opacity common-opacity
 
-    &:checked + {root}__mark
-      background-color bgc-accent
-      border none
-      color clr-white
-      &:before
-        @extend .icon--checkmark:before
+    &:checked:not([checked="false"])
+      & + {root}__mark
+        background-color bgc-accent
+        border none
+        color clr-white
+        &:before
+          @extend .icon--checkmark:before
 
   &__mark
     checkmark-height = 15px

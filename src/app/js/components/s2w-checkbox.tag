@@ -1,12 +1,10 @@
 <s2w-checkbox>
-  <div class="c-select">
-    <label class="p-form__label" for={ opts.item.name }>{ opts.item.label }</label>
-    <div class="p-form__inner l-flex">
-      <div each={ opts.item.options } class="l-flex__item c-checkbox">
-        <input type="checkbox" id={ value } name={ value } class="c-checkbox__item" name={ value } onChange={ onChangeSelect } disabled={ disabled } checked={ selected }>
-        <label for={ value } class="c-checkbox__mark"></label>
-        <label for={ value } class="c-checkbox__label">{ value }</label>
-      </div>
+  <label class="p-form__label" for={ opts.item.name }>{ opts.item.label }</label>
+  <div class="p-form__inner l-flex">
+    <div each={ opts.item.options } class="l-flex__item c-checkbox">
+      <input type="checkbox" id={ value } name={ value } class="c-checkbox__item" onChange={ onChangeSelect } disabled={ disabled } checked={ selected }>
+      <label for={ value } class="c-checkbox__mark"></label>
+      <label for={ value } class="c-checkbox__label">{ value }</label>
     </div>
   </div>
 

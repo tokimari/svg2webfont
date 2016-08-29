@@ -1,6 +1,48 @@
-/**
- * Component Flat Button
- */
+/*!
+---
+name: Flat Button
+category:
+  - component
+  - component/button
+  - component/button/flat-button
+compile: true
+---
+
+* Use `a` or `button` tag.
+
+### Type
+
+- Default
+- Primary
+
+```jade
+button.c-button.c-flat-button Default
+button.c-button.c-flat-button.c-flat-button--primary Primary
+```
+
+### State
+
+- active
+- processing
+
+
+#### Type Default Example
+
+```jade
+button.c-button.c-flat-button Default
+button.c-button.c-flat-button.is-active Active
+button.c-button.c-flat-button.is-processing Processing
+button(disabled).c-button.c-flat-button Disabled
+```
+
+#### Type Primary Example
+```jade
+button.c-button.c-flat-button.c-flat-button--primary Primary
+button.c-button.c-flat-button.c-flat-button--primary.is-active Active
+button.c-button.c-flat-button.c-flat-button--primary.is-processing Processing
+button(disabled).c-button.c-flat-button.c-flat-button--primary Disabled
+```
+*/
 .c-flat-button
   background-color btc-default
   buttonBgAction(@background-color)

@@ -1,6 +1,24 @@
-/**
- * Component List
- */
+/*!
+---
+name: List
+category:
+  - component
+  - component/list
+compile: true
+data:
+  - value: list0 あのイーハトーヴォのすきとおった風
+  - value: list1 あのイーハトーヴォのすきとおった風
+  - value: list2 あのイーハトーヴォのすきとおった風
+---
+
+* List Component is used to group several contents.
+
+```jade
+ul.c-list
+  each item in data
+    li.c-list__item #{item.value}
+```
+*/
 .c-list
   line-height 1.4em
   &__item

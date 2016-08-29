@@ -1,4 +1,4 @@
-/*
+/*!
 ---
 name: Button
 tag:
@@ -6,24 +6,32 @@ tag:
 category:
   - component
   - component/button
+compile: true
 ---
 
-## This is a component document
-
-* Base button component.
+* Base button component
 * Use `a` or `button` tag.
 
-Here's an example code.
+*NOTE: This is the base of button, it has only a minimum of style. So, don't use alone this, use with multi class.*
 
-```html
-<a class="c-button">Base Button</a>
-<a class="c-button" disabled>disabled button</a>
+
+### State
+
+- Default
+- Disabled
+
+```jade
+a.c-button Default
+a(disabled).c-button Disabled
 ```
 */
 .c-button
   background-color transparent
   border none
+  box-sizing border-box
+  display inline-block
   font-size fs-small
   outline none
+  text-align center
   &:not([disabled])
     cursor pointer
