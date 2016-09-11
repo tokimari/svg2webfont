@@ -1,8 +1,6 @@
 'use strict';
 
-const electron = require('electron');
-const {app} = electron;
-const {BrowserWindow} = electron;
+const {app, BrowserWindow} = require('electron');
 
 let win;
 
@@ -18,7 +16,7 @@ function createWindow() {
   });
 
   // for develop mode
-  win.webContents.openDevTools();
+  // win.webContents.openDevTools();
 
   win.on('closed', () => {
     win = null;
